@@ -3,6 +3,8 @@ import { Alert} from 'react-native'
 import Cardbook from '../../components/Cardbook'
 import { Container, Header, Title, Button, Icon, Left, Right, View, Body, Content, Form, Item, Picker, Input } from "native-base";
 import { ScrollView } from 'react-native-gesture-handler';
+import { connect } from 'react-redux'
+import {getBooks} from '../../redux/actions/books'
 class Home extends Component{
 
     constructor(props){
@@ -16,12 +18,15 @@ class Home extends Component{
         console.warn(string)
     }
 
+    componentDidMount = async () => {
+
+      await this.props.dispatch(getBooks())
+     
+  }
 
 
-    _counter(){
-        this.setState({counter:this.state.counter++})
-    }
     render(){
+      console.warn(this.props.bookshow)
         return(
             <Container>
               
@@ -45,11 +50,9 @@ class Home extends Component{
         </View>
           <View style={{ flex:1,
         flexDirection:'row', flexWrap: 'wrap', alignItems: 'center',}}>
+          
           <Cardbook />
           </View>
-  
-        
-
 
 
           </ScrollView>
@@ -60,4 +63,16 @@ class Home extends Component{
 
 }
 
-export default Home;
+const mapStateToProps = state => {
+  return {
+
+      jumlahbuku: state.books.jumlahbuku,
+      bookshow: state.books.bookshow,
+      token: state.users.token,
+      id_user: state.users.id_user,
+      role_id: state.users.role_id
+  }
+
+}
+
+export default connect(mapStateToProps)(Home);
