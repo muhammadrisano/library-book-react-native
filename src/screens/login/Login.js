@@ -30,7 +30,9 @@ export default class Login extends Component {
               <Label>Password</Label>
               <Input />
             </Item>
-            <TouchableOpacity style={{marginTop:30, marginLeft:10} }><Text style={{color:'blue'}}>Have you not registered yet ? Register Here</Text></TouchableOpacity>
+            <TouchableOpacity style={{marginTop:30, marginLeft:10}}  onPress={()=>this.props.navigation.navigate('Register', {
+            userid: 'Tatas'
+          })}><Text style={{color:'blue'}}>Have you not registered yet ? Register Here</Text></TouchableOpacity>
             <Button full style={{marginTop:10}}>
             <Text>Login</Text>
           </Button>
