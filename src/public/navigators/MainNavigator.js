@@ -1,4 +1,4 @@
-import {createStackNavigator, createAppContainer} from 'react-navigation'
+import { createDrawerNavigator,createStackNavigator, createAppContainer} from 'react-navigation'
 
 
 import Home from '../../screens/home/Home'
@@ -16,4 +16,9 @@ const AppNavigator = createStackNavigator({
     initialRouteName:'Home'
 })
 
-export default createAppContainer(AppNavigator)
+const DrawerNavigator = createDrawerNavigator({
+    Home,
+     Register
+  });
+
+export default createAppContainer(DrawerNavigator)
