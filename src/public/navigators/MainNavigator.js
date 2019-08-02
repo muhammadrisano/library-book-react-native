@@ -1,4 +1,4 @@
-import { createDrawerNavigator,createStackNavigator, createAppContainer} from 'react-navigation'
+import { createDrawerNavigator, createStackNavigator, createAppContainer } from 'react-navigation'
 
 
 import Home from '../../screens/home/Home'
@@ -7,20 +7,20 @@ import Register from '../../screens/register/Register'
 import Login from '../../screens/login/Login'
 import Detailbook from '../../screens/detailbook/Detailbook'
 const AppNavigator = createStackNavigator({
-    Home,
-    Profile,
-    Register,
-    Login,
-    Detailbook
-},{
-    headerMode:'none',
-    initialRouteName:'Login'
-})
+  Home,
+  Profile,
+  Register,
+  Login,
+  Detailbook
+}, {
+    headerMode: 'none',
+    initialRouteName: 'Home'
+  })
 
 const DrawerNavigator = createDrawerNavigator(
-    {
-    Menu:{
-        screen: AppNavigator,
+  {
+    Menu: {
+      screen: AppNavigator,
     },
     Home,
     Login
@@ -34,7 +34,7 @@ const DrawerNavigator = createDrawerNavigator(
       drawerLockMode: 'locked-closed',
     },
   }
-  );
+);
 
 const AppDrawer = createAppContainer(DrawerNavigator)
 export default createAppContainer(DrawerNavigator)
