@@ -3,7 +3,7 @@ import axios from 'axios';
 export const getBooks = (page = 1) => {
     return {
         type: 'GET_BOOK_PAGE',
-        payload: axios.get(`http://libraryapi.muhammadrisano.online/books?page=` + page, {
+        payload: axios.get(`http://192.168.6.126:4000/books?page=` + page, {
             headers: { "authorization": "jangan-coba-coba" },
         }),
     };
@@ -12,7 +12,7 @@ export const getBooks = (page = 1) => {
 export const searchBook = (e) => {
     return {
         type: 'SEARCH_BOOK',
-        payload: axios.get('http://libraryapi.muhammadrisano.online/books?search=' + e, {
+        payload: axios.get('http://192.168.6.126:4000/books?search=' + e, {
             headers: { "authorization": "jangan-coba-coba" },
         }),
     };

@@ -14,7 +14,7 @@ const AppNavigator = createStackNavigator({
     Detailbook
 },{
     headerMode:'none',
-    initialRouteName:'Home'
+    initialRouteName:'Login'
 })
 
 const DrawerNavigator = createDrawerNavigator(

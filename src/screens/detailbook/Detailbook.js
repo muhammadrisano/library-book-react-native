@@ -6,6 +6,7 @@ import moment from 'moment'
 
 class Detailbook extends Component{
 
+    
 
     render(){
         let book =this.props.navigation.getParam('bookdetail')
@@ -13,13 +14,13 @@ class Detailbook extends Component{
             <ScrollView>
      
                <ImageBackground source={{uri: book.image}} style={{width: '100%', height: 250, position:'relative'}}>
-                   <Content>
-    <H3 style={{color:"orange", position:'absolute', bottom:2}}>{book.name}</H3>
-    </Content>
+                
+    <H3 style={{position:"absolute", bottom:5}}>{book.name}</H3>
+  
     <Thumbnail square large source={{uri: book.image}} style={{position:"absolute", bottom:-45, right:20, borderWidth: 3, borderColor: "grey", borderRadius: 8, }} />
      
   </ImageBackground>
-  <View>
+  <View style={{padding:20}}>
     <Text>Date : {moment(book.created_at).format('ll')} </Text>
   <Text>Write: {book.writer}</Text>
   </View>
