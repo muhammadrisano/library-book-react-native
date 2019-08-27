@@ -23,14 +23,14 @@ Music Game App is an application playing game that you must touch a button and f
 ## Demo
 
 ### First Page
-<img src="src/assets/image/git/book-home.jpeg" title="source: imgur.com" width='500px'/>
+<img src="src/assets/image/git/book-home.jpeg" width='500px'/>
   
-### Register Page
-<img src="https://i.imgur.com/VznU3XW.jpg" title="source: imgur.com" width='500px'/>
+### Book Detail Page
+<img src="src/assets/image/git/book-detail.jpeg" width='500px'/>
 
-### Main Page
-<img src="https://i.imgur.com/8mQ29f7.jpg" title="source: imgur.com" width='500px'/>
+### Borrow Book
+<img src="src/assets/image/git/book-borrow.jpeg" width='500px'/>
 
-### Leaderboard Page
-<img src="https://i.imgur.com/qOacRzp.jpg" title="source: imgur.com" width='500px'/>
+### List Borrow Book Page
+<img src="src/assets/image/git/book-borrow-list.jpeg" width='500px'/>
   
